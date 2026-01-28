@@ -41,7 +41,8 @@ pipeline {
         }
         stage('docker container') {
             steps{
-                sh "docker run -d --name vinod$DOCKER_TAG -p 4000:8080 vinod05061994/final_project:$DOCKER_TAG"
+                sh "docker run -d --name vinod$DOCKER_TAG -p 0:8080 vinod05061994/final_project:$DOCKER_TAG"
+                sh "docker port vinod${DOCKER_TAG}"
             }
         }
     }
