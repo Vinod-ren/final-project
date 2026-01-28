@@ -41,7 +41,7 @@ pipeline {
         }
         stage('docker container') {
             steps{
-                docker run -d --name vinod -p 8080:8080 vinod05061994/final_project
+                sh "docker run -d --name vinod -p 8080:8080 vinod05061994/final_project"
             }
         }
     }
