@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE    = "vinod/final-project-app"
+        DOCKER_IMAGE    = "vinod05061994/final_project"
         DOCKER_TAG      = "${BUILD_NUMBER}"
     }
 
